@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://warning.png" type="Texture" id=2]
+[ext_resource path="res://evil1.png" type="Texture" id=3]
+[ext_resource path="res://nice2.png" type="Texture" id=4]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.121569, 0.145098, 0.192157, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 190.0
+margin_bottom = 190.0
+
+[node name="WarningTexture" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 145.0
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+stretch_mode = 6
+
+[node name="EvilTexture" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+visible = false
+margin_top = 43.0
+margin_right = 160.0
+margin_bottom = 82.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 6
+
+[node name="NiceTexture" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+visible = false
+margin_top = 64.0
+margin_right = 160.0
+margin_bottom = 124.0
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 149.0
+margin_right = 180.0
+margin_bottom = 180.0
+text = "ERROR: no game found
+Close the window !"
+align = 1
+valign = 1
+autowrap = true

@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Bad Window"
+run/main_scene="res://Main.tscn"
+boot_splash/fullsize=false
+config/icon="res://nice1.png"
+
+[debug]
+
+settings/crash_handler/message="Please include this when reporting the bug on https://github.com/flofriday/bad-window"
+
+[display]
+
+window/size/width=200
+window/size/height=200
+window/size/resizable=false
+window/size/always_on_top=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
